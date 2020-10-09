@@ -1,0 +1,46 @@
+<head>
+    <title>Handlebars</title>
+    <script src="handlebars-v4.7.3.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="Data">
+    <script id="index" type="text/x-handlebars-template">
+
+    <div class="header">
+        <p><img src={{logo}} height = 100></p>
+        <hr>
+    </div>
+
+    <div class="banner">
+        <nav>
+            <ul class="banner-menu">
+                {{#each menu}}
+                    <li><a href="{{this}}.html">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="content">
+            <div class="content-left">
+                <p><img src="photo.jpg" alt="Photo by Sacha Styles on Unsplash" height = 450></p>
+            </div>
+            <div class="content-right">
+                <h1>{{h1}}</h1>
+                <p>{{p1}}</p>
+                <p>{{p2}}</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{footer}}, 2020</p>
+    </footer>
+
+    </script>
+    <script src="index.js"></script>
+    </div>
+</body>
